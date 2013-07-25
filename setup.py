@@ -9,12 +9,13 @@ with open('README.md') as f:
 with open('LICENSE') as f:
     license = f.read()
 
-setup(name='django-autoslug',
-      version='0.1',
-      description='Automatic slugification on Django models.',
-      long_description=readme,
-      author='Patrick Jacobs',
-      url='https://github.com/ceol/django-autoslug',
-      license=license,
-      packages=find_packages(),
-     )
+setup(
+    name='django-autoslug',
+    version='0.1',
+    description='Automatic slugification on Django models.',
+    long_description=readme,
+    author='Patrick Jacobs',
+    url='https://github.com/ceol/django-autoslug',
+    license=license,
+    packages=find_packages(),
+)
