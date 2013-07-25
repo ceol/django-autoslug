@@ -20,8 +20,8 @@ django-autoslug has been tested on Django 1.5 using Python 2.7.3.
     from autoslug.fields import AutoSlugField
 
     class MyModel(models.Model):
-        name = models.CharField(max_length=255) # required field
-        slug = AutoSlugField(populate_from=('name',))
+        name = models.CharField(max_length=255)
+        slug = AutoSlugField(populate_from=['name'])
 
 Recommended parameters:
 
