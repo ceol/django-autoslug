@@ -10,8 +10,6 @@ django-autoslug is a signal-like application that automatically creates unique, 
 
 django-autoslug has been tested on Django 1.5 using Python 2.7.3.
 
-Models being attached must have a proper `pk` attribute.
-
 ## Installation
 
     1. python setup.py install
