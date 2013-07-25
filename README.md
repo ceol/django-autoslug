@@ -29,11 +29,11 @@ Recommended parameters:
 
 * `populate_from` - A list or tuple of instance attribute names, custom functions, or both. If supplied, django-autoslug will default `editable` to false. This field is required for all of the optional parameters, meaning if it's not set, the field as good as a normal `CharField`. Custom functions are passed the current instance of the model. E.g. to create a slug from the model's primary key converted to base-36:
 
-    slug = AutoSlugField(populate_from=(lambda instance: int_to_base36(instance.pk),))
+        slug = AutoSlugField(populate_from=(lambda instance: int_to_base36(instance.pk),))
 
 Optional parameters:
 
-* `separator` - The string used when piecing together slugs. Default `-`
+* `separator` - The string used when piecing together slugs. Default `-` (dash)
 * `always_update` - If true, the slug will change as the `populated_form` values change instead of just at creation. This is useful if you want the slug to reflect model changes and don't care about URLs breaking. Default `False`
 * `slugify` - The function used to create slugs. Default `autoslug.utils.slugify`
 
