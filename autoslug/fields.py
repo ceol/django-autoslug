@@ -43,7 +43,7 @@ class AutoSlugField(CharField):
 
         for attr in self._populate_from:
             try:
-                part = self._slugify(attr(instance), self._separator)
+                part = self._slugify(attr(self, instance), self._separator)
             except TypeError:
                 part = self._slugify(getattr(instance, attr), self._separator)
             parts.append(part)

@@ -25,9 +25,7 @@ django-autoslug has been tested on Django 1.5 using Python 2.7.3.
 
 Recommended parameters:
 
-* `populate_from` - A list or tuple of instance attribute names, custom functions, or both. If supplied, django-autoslug will default `editable` to false. This field is required for all of the optional parameters, meaning if it's not set, the field as good as a normal `CharField`. Custom functions are passed the current instance of the model. E.g. to create a slug from the model's primary key converted to base-36:
-
-        slug = AutoSlugField(populate_from=(lambda instance: int_to_base36(instance.pk),))
+* `populate_from` - A list or tuple of instance attribute names, custom functions, or both. If supplied, django-autoslug will default `editable` to false. This field is required for all of the optional parameters, meaning if it's not set, the field as good as a normal `CharField`. Custom functions are passed the `field` instance and `model` instance.
 
 Optional parameters:
 
